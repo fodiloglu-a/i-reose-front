@@ -30,3 +30,23 @@ tbody tr:nth-child(odd) {
 td {
   padding: 10px; /* Hücre iç içe boşluğu */
 }
+.button-data{
+  background-color: black;
+
+}
+.ticker-container {
+  overflow: hidden; /* İçerik dışarı taştığında gizle */
+  white-space: nowrap; /* İçeriği yatayda sırala */
+  background-color: #F9D401;
+  color: #333333;
+  height: 5rem;
+   position: absolute; /* Öğeyi sabitle */
+  top: 0; /* Sayfanın üstüne yerleştir */
+  right: 0; /* Sayfanın soluna yerleştir (isteğe bağlı) */
+  width: 50%; /* Sayfanın genişliği kadar genişlet */
+   z-index: 999; /* Diğe
+}
+
+.ticker {
+  display: inline-block; /* İçeriği yatayda sırala */
+}

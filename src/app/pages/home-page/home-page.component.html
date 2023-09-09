@@ -1,3 +1,16 @@
+<div class="ticker-container">
+  <div class="ticker">
+    {{ contentList.length}}
+    {{ currentContent}}
+    <p>"Lorem ipsum" ifadesi 11 karakterden oluşmaktadır. Eğer 20 karakter uzunluğunda bir
+      "Lorem ipsum" ifadesi elde etmek istiyorsanız, bu ifadeyi iki kez tekrarlayarak elde edebilirsiniz.
+      Örneğin: </p>
+
+  </div>
+</div>
+
+
+
 <table>
   <thead>
   <tr>
@@ -19,8 +32,6 @@
     <td>{{ item.sifra }}</td>
     <td>{{ item.exchangeRate }}</td>
     <td>{{ item.oznaka }}</td>
-
-
     <td [style.color]="getRateColor(item.rateDay)">
       {{ item.rateDay }}
     </td>
