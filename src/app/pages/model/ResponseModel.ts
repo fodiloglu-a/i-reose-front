@@ -7,5 +7,14 @@ export interface ResponseModel {
   endDate: Date|null;
   currencyDTO: CurrentDTO|null;
   currencyDTOs: CurrentDTO[]|null;
+  weekGraph: { [key: number]: string };
+  monthGraph: { [key: number]: string };
+  yearGraph: { [key: number]: string };
+  fiveYearGraph: { [key: number]: string };
+  allTimeGraph: { [key: number]: string };
+
+
+
+
 
 }

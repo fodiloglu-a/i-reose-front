@@ -1,0 +1,30 @@
+<div class="btn-group">
+  <a routerLink="/graph" class="btn btn-primary">Back Graph</a>
+</div>
+<input type="text" #oznakaInput placeholder="Oznaka">
+<button (click)="listenClick(oznakaInput.value)">Get graph for weak</button>
+
+<div  >
+  <br>
+  <br>
+  <br>
+  <div>
+    <canvas id="year-bar">{{chartBar}}</canvas>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <canvas id="yearLine">{{chartLine}}</canvas>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <canvas id="yearBubble">{{chartBubble}}</canvas>
+  </div>
+</div>
+
+
+
+

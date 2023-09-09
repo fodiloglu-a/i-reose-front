@@ -1,6 +1,7 @@
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {catchError, Observable, throwError} from "rxjs";
 import {Injectable} from "@angular/core";
+import {ResponseModel} from "../pages/model/ResponseModel";
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class ServiceService {
       );
   }
 
+  getModelByOznaka(oznaka: string): Observable<ResponseModel> {
+    const url = `${this.apiUrl}/graph/${oznaka}`;
+    return this.http.get<ResponseModel>(url);
+  }
 
   getByDatum(date: Date): Observable<any> {
     return this.http.get(this.apiUrl);

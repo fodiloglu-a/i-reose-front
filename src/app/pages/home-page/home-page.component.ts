@@ -12,12 +12,38 @@ import {CurrentDTO} from "../model/CurrentDTO";
 })
 export class HomePageComponent {
 
-   public response:any;
+  contentList: string[] = [
+    'News : For Currency and Currency Rate',
 
-   public currencyDTOS:CurrentDTO[] | null=[];
+  ];
+
+  currentIndex: number = 0;
+  currentContent: string = '';
+   data: ResponseModel | null = null;
+
+
+
+  public currencyDTOS:CurrentDTO[] | null=[];
+
 
   constructor(private sercice:ServiceService) {
+
+
     this.getHomePage()
+
+
+  }
+
+  ngOnInit(): void {
+
+    this.updateTickerContent();
+    setInterval(() => this.updateTickerContent(), 5000); // 5 saniyede bir içerikleri güncelle
+  }
+
+  updateTickerContent() {
+
+    this.currentContent = this.contentList[this.currentIndex];
+    this.currentIndex = (this.currentIndex + 1) % this.contentList.length;
   }
 
 
@@ -27,7 +53,10 @@ export class HomePageComponent {
       (response:ResponseModel)=>{
         console.log("this.currencyDTOS=response.currencyDTOs;")
           this.currencyDTOS=response.currencyDTOs;
-
+        this.currencyDTOS?.forEach((item) => {
+          this.contentList.push(
+            `${item.oznaka} >>>>>, Exchange Rate: ${item.exchangeRate}`);
+        });
 
 
 
@@ -50,4 +79,7 @@ export class HomePageComponent {
       return '#F9D401'; // Sıfır veya null için siyah (isteğe bağlı)
     }
   }
+
+
+
 }
