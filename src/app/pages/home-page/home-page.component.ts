@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {ServiceService} from "../../services/service.service";
 import {ResponseModel} from "../model/ResponseModel";
-import {error} from "@angular/compiler-cli/src/transformers/util";
+
 import {CurrentDTO} from "../model/CurrentDTO";
 
 @Component({

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomePageComponent} from "./pages/home-page/home-page.component";
-import {CurrencyComponent} from "./pages/currency/currency.component";
+
 import {CurrencyPageComponent} from "./pages/currency-page/currency-page.component";
 import {GraphPageComponent} from "./pages/graph-page/graph-page.component";
 import {GrapgsComponent} from "./pages/graph-page/weakGraph/grapgs.component";

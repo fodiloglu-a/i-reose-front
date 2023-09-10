@@ -1,12 +1,30 @@
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
-<p>currency-page works!</p>
+<table>
+  <thead>
+  <tr>
+    <th>Datum</th>
+    <th>Sifra</th>
+    <th>Exchange Rate</th>
+    <th>Oznaka</th>
+    <th>Seç</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of currencyDTOS; let i = index">
+    <td>{{ item.datum }}</td>
+    <td>{{ item.sifra }}</td>
+    <td>{{ item.exchangeRate }}</td>
+    <td>{{ item.oznaka }}</td>
+    <td><input type="checkbox" (click)="addSelected(item)" [(ngModel)]="item.isSelected"  /></td>
 
+  </tr>
+  </tbody>
+</table>
+
+<div>
+  Başlangıç Tarihi: <input type="date" [(ngModel)]="startDate" />
+  Bitiş Tarihi: <input type="date" [(ngModel)]="endDate" />
+  <button (click)="getCompare()">Compare</button>
+</div>
+<div *ngFor="let item of Object.keys(profitLose)">
+  <p>{{ item }}: {{ profitLose[item] }}</p>
+</div>

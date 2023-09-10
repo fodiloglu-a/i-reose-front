@@ -1,4 +1,5 @@
 export interface CurrentDTO {
+  isSelected: boolean|null;
   datum: Date | null;
   sifra: string | null;
   exchangeRate: BigInteger | null;
