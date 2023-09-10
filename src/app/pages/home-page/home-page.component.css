@@ -39,14 +39,27 @@ td {
   white-space: nowrap; /* İçeriği yatayda sırala */
   background-color: #F9D401;
   color: #333333;
-  height: 5rem;
-   position: absolute; /* Öğeyi sabitle */
-  top: 0; /* Sayfanın üstüne yerleştir */
-  right: 0; /* Sayfanın soluna yerleştir (isteğe bağlı) */
-  width: 50%; /* Sayfanın genişliği kadar genişlet */
-   z-index: 999; /* Diğe
+  height: 20rem;
+  position: absolute; /* Öğeyi sabitle */
+  top: 10rem; /* Sayfanın üstüne yerleştir */
+  right: 1rem; /* Sayfanın soluna yerleştir (isteğe bağlı) */
+  width: 25%; /* Sayfanın genişliği kadar genişlet */
+  z-index: 999;}
+.ticker{
+  padding: 1rem;
 }
+.current-content{
 
-.ticker {
-  display: inline-block; /* İçeriği yatayda sırala */
+  border-style: solid;
+  border-color: #333333;
+  background-color: #bbbbbb;
+  color: #333333;
+  padding: 1rem;
+  overflow: hidden; /* Taşan içeriği gizler */
+  white-space: nowrap;
+
+}
+.title{
+  top: 0;
+  margin: 5rem;
 }

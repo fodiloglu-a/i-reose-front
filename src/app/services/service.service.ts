@@ -27,7 +27,7 @@ export class ServiceService {
   }
 
   getModelByOznaka(oznaka: string): Observable<ResponseModel> {
-    const url = `${this.apiHomeUrl}/graph/${oznaka}`;
+    const url = `${this.apiBaseUrl}/graph/${oznaka}`;
     return this.http.get<ResponseModel>(url);
   }
   getCurrencyPage():Observable<ResponseModel>{
