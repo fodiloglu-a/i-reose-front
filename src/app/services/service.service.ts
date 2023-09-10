@@ -8,14 +8,15 @@ import {ResponseModel} from "../pages/model/ResponseModel";
 })
 export class ServiceService {
 
-  apiUrl = "http://localhost:8080/home"; // Doğru şekilde apiUrl tanımlandı
+  apiHomeUrl = "http://localhost:8080/home"; // Doğru şekilde apiUrl tanımlandı
+  apiBaseUrl = "http://localhost:8080"; //
 
   constructor(private http: HttpClient) { }
 
   getHomePage(): Observable<any> {
     console.log("getHomePage");
 
-    return this.http.get<any>(this.apiUrl, { withCredentials: true })
+    return this.http.get<any>(this.apiHomeUrl, { withCredentials: true })
       .pipe(
         catchError((error: HttpErrorResponse) => {
           console.error("Hata:", error);
@@ -26,11 +27,21 @@ export class ServiceService {
   }
 
   getModelByOznaka(oznaka: string): Observable<ResponseModel> {
-    const url = `${this.apiUrl}/graph/${oznaka}`;
+    const url = `${this.apiHomeUrl}/graph/${oznaka}`;
     return this.http.get<ResponseModel>(url);
   }
-
-  getByDatum(date: Date): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getCurrencyPage():Observable<ResponseModel>{
+    const url = `${this.apiBaseUrl}/currency`;
+    return this.http.get<ResponseModel>(url);
   }
+  getComparePageValue(requestModel:ResponseModel):Observable<ResponseModel>{
+
+
+    const url =`${this.apiBaseUrl}/currency/compare`;
+    return this.http.post<ResponseModel>(url,requestModel);
+
+  }
+
+
 }
+

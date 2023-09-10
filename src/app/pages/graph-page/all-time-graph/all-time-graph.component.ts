@@ -70,7 +70,7 @@ export class AllTimeGraphComponent  {
 
   createBarCart(){
     this.chartBar = new Chart('allBar', {
-      type: 'bar',
+      type: 'radar',
       data: {
         labels:Object.keys(this.allTime),// Hafta sayıları
         datasets: [
@@ -92,7 +92,7 @@ export class AllTimeGraphComponent  {
   }
   createLineChart(){
     this.chartLine = new Chart('allLine', {
-      type: 'line',
+      type: 'polarArea',
       data: {
         labels:Object.keys(this.allTime),// Hafta sayıları
         datasets: [
