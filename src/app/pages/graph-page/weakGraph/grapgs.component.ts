@@ -17,6 +17,7 @@ export class GrapgsComponent  {
   public chartBar: any;
   public chartLine: any;
   public chartBubble: any;
+  title:any
 
   public yearGraph: { [p: number]: string } = {}; // Hafta grafiği verisi
   showChart: any;
@@ -25,6 +26,7 @@ export class GrapgsComponent  {
   constructor(private service:ServiceService) {
 
     this.oznaka='';
+    this.title="COMPARE TO WEAK"
 
 
   }

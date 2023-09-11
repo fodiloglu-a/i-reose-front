@@ -2,13 +2,14 @@ import { Component, AfterViewInit } from '@angular/core';
 import {Chart} from "chart.js/auto";
 import {ResponseModel} from "../../model/ResponseModel";
 import {ServiceService} from "../../../services/service.service";
+import {TmplAstHoverDeferredTrigger} from "@angular/compiler";
 
 
 
 @Component({
   selector: 'app-five-year',
   templateUrl: './five-year-graph.component.html',
-  styleUrls: ['./five-year-graph.component.css']
+  styleUrls: ['../weakGraph/grapgs.component.css']
 })
 export class FiveYearGraphComponent  {
 
@@ -17,6 +18,7 @@ export class FiveYearGraphComponent  {
   public chartBar: any;
   public chartLine: any;
   public chartBubble: any;
+  title:any
 
   public fiveYear: { [p: number]: string } = {}; // Hafta grafiği verisi
   showChart: any;
@@ -25,6 +27,7 @@ export class FiveYearGraphComponent  {
   constructor(private service:ServiceService) {
 
     this.oznaka='';
+    this.title="COMPARE TO FİVE YEAR"
 
 
   }

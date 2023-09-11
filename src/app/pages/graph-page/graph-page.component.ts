@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./graph-page.component.css']
 })
 export class GraphPageComponent  {
+  title:any
 
 
+  constructor() {
+    this.title = "GRAPH PAGE";
+  }
 }

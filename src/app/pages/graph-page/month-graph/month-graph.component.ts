@@ -6,7 +6,7 @@ import {Chart} from "chart.js/auto";
 @Component({
   selector: 'app-month-graph',
   templateUrl: './month-graph.component.html',
-  styleUrls: ['./month-graph.component.css']
+  styleUrls: ['../weakGraph/grapgs.component.css']
 })
 export class MonthGraphComponent   {
 
@@ -15,7 +15,7 @@ export class MonthGraphComponent   {
   public chartBar: any;
   public chartLine: any;
   public chartBubble: any;
-
+  title:any
   public monthGrap: { [p: number]: string } = {}; // Hafta grafiği verisi
   showChart: any;
   oznaka:any;
@@ -23,6 +23,7 @@ export class MonthGraphComponent   {
   constructor(private service:ServiceService) {
 
     this.oznaka='';
+    this.title="COMPARE TO MONTH"
 
 
   }

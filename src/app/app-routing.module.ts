@@ -13,12 +13,14 @@ import {AllTimeGraphComponent} from "./pages/graph-page/all-time-graph/all-time-
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'currency', component: CurrencyPageComponent },
-  { path: 'graph', component: GraphPageComponent },
-  { path: 'week-graph', component: GrapgsComponent },
-  { path: 'month-graph', component: MonthGraphComponent },
-  { path: 'year-graph', component: YearGraphComponent },
-  { path: 'five-year-graph', component: FiveYearGraphComponent },
-  { path: 'all-time-graph', component: AllTimeGraphComponent },
+  { path: 'graph', component: GraphPageComponent, children: [
+      { path: '', redirectTo: 'graph', pathMatch: 'full' }, // Varsayılan alt bileşen rotası
+      { path: 'graph/week-graph', component: GrapgsComponent },
+      { path: 'graph/month-graph', component: MonthGraphComponent },
+      { path: 'graph/year-graph', component: YearGraphComponent },
+      { path: 'graph/five-year-graph', component: FiveYearGraphComponent },
+      { path: 'graph/all-time-graph', component: AllTimeGraphComponent },
+    ]},
   // Add other routes as needed
   { path: '', redirectTo: '/', pathMatch: 'full' }, // Redirect to home by default
 ];

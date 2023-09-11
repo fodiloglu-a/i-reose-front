@@ -6,9 +6,10 @@ import {Chart} from "chart.js/auto";
 @Component({
   selector: 'app-year-graph',
   templateUrl: './year-graph.component.html',
-  styleUrls: ['./year-graph.component.css']
+  styleUrls: ['../weakGraph/grapgs.component.css']
 })
 export class YearGraphComponent  {
+  title:any
 
 
   data: ResponseModel | null = null;
@@ -22,6 +23,7 @@ export class YearGraphComponent  {
 
   constructor(private service:ServiceService) {
 
+    this.title="COMPARE TO YEAR "
     this.oznaka='';
 
 
