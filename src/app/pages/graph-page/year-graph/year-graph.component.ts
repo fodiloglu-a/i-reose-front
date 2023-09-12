@@ -70,7 +70,7 @@ export class YearGraphComponent  {
 
 
   createBarCart(){
-    this.chartBar = new Chart('year-bar', {
+    this.chartBar = new Chart('yearBar', {
       type: 'bar',
       data: {
         labels:Object.keys(this.yearGraph),// Hafta sayıları
