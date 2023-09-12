@@ -1,6 +1,52 @@
-table{
+.graph{
+  margin: 0.5rem;
+  color: #333333;
+
+}
+
+.container-to-compare {
+
+  color: #3A3A42;
+  right: 1rem;
+  position: absolute;
+  width: 40%;
+  padding: 1rem;
+}
+
+.date {
+  margin: 0.7rem;
+  padding: 0.7rem;
+  background-color: #F9D401;
+}
+.select{
+  margin: 0.7rem;
+  padding: 0.7rem;
+  background-color: #3A3A42;
+  color: #D2D2D0;
+}
+
+.compare-result {
+  margin: 0.7rem;
+
+  padding: 1rem;
+  color: #bbbbbb;
+  border-style: solid;
+  border-color: #3A3A42;
+  background-color:#eeeeee;
+
+}
+.compare-button{
+  margin: 0.7rem;
+  font-size: larger;
+
+
+}
+
+
+table {
   color: #333333;
 }
+
 /* Tablo başlığı (thead) stil kuralları */
 thead {
 

@@ -13,6 +13,8 @@ export interface ResponseModel {
   fiveYearGraph: { [key: number]: string };
   allTimeGraph: { [key: number]: string };
   profitAndLose: { [key: string]: number };
+  firstGraph: { [key: number]: string };
+  secondGraph: { [key: number]: string };
 
 
 

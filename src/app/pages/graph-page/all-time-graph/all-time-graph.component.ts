@@ -7,7 +7,7 @@ import {Chart} from "chart.js/auto";
 @Component({
   selector: 'app-all-time',
   templateUrl: './all-time-graph.component.html',
-  styleUrls: ['./all-time-graph.component.html']
+  styleUrls: ['../weakGraph/grapgs.component.css']
 })
 export class AllTimeGraphComponent  {
 
@@ -20,10 +20,12 @@ export class AllTimeGraphComponent  {
   public allTime: { [p: number]: string } = {}; // Hafta grafiği verisi
 
   oznaka:any;
+   title: string;
 
   constructor(private service:ServiceService) {
 
     this.oznaka='';
+    this.title="COMPARE TO ALL TIME"
 
 
   }
